@@ -1,0 +1,1 @@
+alias <nombre_alias>="git log --all --graph --decorate --oneline"
