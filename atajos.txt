@@ -1,3 +1,43 @@
+git config --global user.name “nombre”: Configurar Nombre que salen en los commits.
+
+git config --global user.email nombre@gmail.com: Configurar Email.
+
+git config --global color.ui true: Marco de colores para los comando.
+git help: Muestra una lista con los comandos más utilizados en GIT.
+
+git init: Podemos ejecutar ese comando para crear localmente un repositorio con GIT y así utilizar todo el funcionamiento que GIT ofrece. Basta con estar ubicados dentro de la carpeta donde tenemos nuestro proyecto y ejecutar el comando. Cuando agreguemos archivos y un commit, se va a crear el branch master por defecto.
+
+git add + path: Agrega al repositorio los archivos que indiquemos.
+
+git add : Añadimos todos los archivos para el commit.
+
+git add –A: Agrega al repositorio TODOS los archivos y carpetas que estén en nuestro proyecto, los cuales GIT no está siguiendo.
+
+git commit -m “mensaje” + archivos: Hace commit a los archivos que indiquemos, de esta manera quedan guardados nuestras modificaciones.
+
+git commit -am “mensaje”: Hace commit de los archivos que han sido modificados y GIT los está siguiendo.
+
+git checkout -b NombreDeBranch: Crea un nuevo branch y automaticamente GIT se cambia al branch creado, clonando el branch desde donde ejecutamos el comando.
+
+git branch: Nos muestra una lista de los branches que existen en nuestro repositorio.
+
+git checkout NombreDeBranch: Sirve para moverse entre branches, en este caso vamos al branch que indicamos en el comando.
+
+git merge NombreDeBranch: Hace un merge entre dos branches, en este caso la dirección del merge sería entre el branch que indiquemos en el comando, y el branch donde estémos ubicados.
+
+git status: Nos indica el estado del repositorio, por ejemplo cuales están modificados, cuales no están siendo seguidos por GIT, entre otras características.
+
+git clone URL/name.git NombreProyecto: Clona un proyecto de git en la carpeta NombreProyecto.
+
+git push origin NombreDeBranch: Luego de que hicimos un git commit, si estamos trabajando remotamente, este comando va a subir los archivos al repositorio remoto, específicamente al branch que indiquemos.
+
+git pull origin NombreDeBranch: Hace una actualización en nuestro branch local, desde un branch remoto que indicamos en el comando.
+
+git tag : Muestra una lista de todos los tags.
+
+git tag -a <verison> - m “esta es la versión x” : Crea un nuevo tags.
+
+
 alias <nombre_alias>="git log --all --graph --decorate --oneline"
 
 
@@ -16,3 +56,28 @@ git stash pop : Aplica el stash más reciente y lo elimina. El que tiene num_sta
 git stash pop stash@{num_stash} : Aplica los cambios de un stash específico y elimina lo stash.
 git stash branch nombre_de_rama : Crea una rama y aplica el stash mas reciente.
 git stash branch nombre_de_rama stash@{num_stash} : Crea una rama y aplica el stash especificado.
+
+git grep <palabra>
+git grep -n <palabra>
+git grep -c <palabra>
+git log -S "<palabra>"
+
+git shotlog: Muestra la descripción de los commits y la cantidad por cada persona
+
+git shortlog --sn: Muestra la cantidad de commits por cada persona
+
+git shortlog --sn --all --no-merges: Muestra la cantidad de commit sin incluir los merge
+
+git config --global alias.stasts "git shortlog --sn --all --no-merges": Agregamos un alias de manera global en git
+
+git blame file.ext Vemos líneas por línea quien ha hecho los cambios
+
+git blame -C file.ext Muestra de una ejor forma las modificaciones realizadas línea por línea
+
+git command --help Muestra la documentación para ese comando.
+
+git blame file.ext -L35,60 Muestra los cambios realizados desde la línea 35 hasta 60
+
+git branch -r Muestra el listado de ramas remotas (Las que están el el servidor)
+
+git branch -a Muestra todas las ramas, las del repositorio local y las del reposotorio remoto
