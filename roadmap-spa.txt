@@ -1,0 +1,33 @@
+Empaquetador y transpilador:
+
+Webpack
+Babel
+
+Estilado con CSS en JS con:
+
+styled-components
+
+Como linter:
+
+Standard JS
+
+Para fetching (obtención) de datos:
+
+GraphQL
+React Apollo
+
+Para el enrutado de la SPA:
+
+Reach Router
+
+Para las buenas prácticas:
+
+Lighthouse
+Cypress
+
+Por último SEO, PWA y Deploy con:
+
+React Helmet
+Workbox
+Progressive Web App
+Deply con Now
